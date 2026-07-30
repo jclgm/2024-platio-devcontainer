@@ -1,7 +1,7 @@
 {
 	"name": "PlatformIO (Community)",
 	"build": {
-		"dockerfile": "Containerfile",
+		"dockerfile": "Dockerfile",
 		"context": ".",
 		"args": {
 			"FEDORA_COMPAT" : "1", // enables fedora compatibility mode (extra dialout group with gid 18)
@@ -11,7 +11,10 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"terminal.integrated.defaultProfile.linux": "zsh"
+				//"terminal.integrated.defaultProfile.linux": "zsh"
+        // Use bash instead of shell
+        // "terminal.integrated.shell.linux": "/bin/bash"
+				"terminal.integrated.defaultProfile.linux": "/bin/bash"
 			},
 			"extensions": [
 				"ms-vscode.cpptools",
